@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family:'Montserrat', sans-serif;
+   letter-spacing: 2px;
+   scroll-behavior: smooth;
+}
+
+html, body{
+   width: 100%;
+   overflow-x: hidden;
+ }
+
+ ::-webkit-scrollbar {
+   width: 0px;
+   background: transparent; /* make scrollbar transparent */
+}
+
+/* ============= header ====================*/
+
+.nav-main {
+   color: #c4cdc1;
+   width: 100%;
+   position: fixed;
+   font-size: 20px;
+   padding: 20px;
+   background-color: #28363D;
+   text-transform: uppercase;
+   top: 0;
+   z-index: 101;
+   display: flex;
+   justify-content: space-between;
+   background-color: transparent;
+}
+
+.logout {
+   color: #c4cdc1;
+   font-size: 15px;
+   font-weight: 100;
+   padding: 10px 15px;
+   background-color: inherit;
+   border: 1px solid rgb(22, 30, 34);
+   outline: none;
+   border-radius: 4px;
+}
+
+.logout:hover, .logout:focus {
+   border: 0;
+   transition: all .3s ease-in-out;
+   background-color: #55B998;
+   color: #fff;
+}
+
+/* front */
+.front-page {
+   padding-top: 25vh;
+   background-color: #28363D;
+   height: 100vh;
+   text-align: center; 
+}
+
+/* nav menu and overlay */
+.menu-container {
+   text-align: center;
+   background-color: #28363D;
+   height: 0px;
+   transition: height .1s ease;
+   opacity: 0.9;
+}
+
+.icon-container {
+   width: 30px;
+}
+
+.menu-container li {
+   font-size: 30px;
+   list-style: none;
+   padding: 20px;
+   font-weight: bolder;
+   text-transform: uppercase;
+   position: relative;
+   top: 200px;
+}
+
+.menu-container a {
+   text-decoration: none;
+   color: #c4cdc1;
+   cursor: pointer;
+}
+
+.ul-con {
+   width: fit-content;
+   margin: 0 auto;
+   display: none;
+   transition: height .2s ease-in;
+}
+
+.ul-con li a {
+   transition: all .3s ease;
+   width: fit-content;
+   padding: 15px 20px;
+   border-radius: 25px;
+}
+
+.ul-con li a:hover {
+   background: #6b21a8;
+   color: #fff;
+}
+
+.menu-container.hide {
+   display: contents;
+}
+
+.menu-container.show {
+   height: 100vh;
+   position:fixed;
+   top:0;
+   width:100%;
+   z-index:100;
+}
+
+.menu-container.show .ul-con {
+   display: contents;
+}
+
+/* profile */
+.profile {
+   background-color: #232A55;
+   height: 100vh;
+   text-align: center;
+   padding-top: 20vh;
+}
+
+.profile-box {
+   width: 80%;
+   margin: auto;
+   padding: 50px 20px 20px 20px;
+   background-color: #2A336C;
+   border-radius: 20px;
+}
+
+.pic {
+   border-radius: 50%;
+   width: 200px;
+   height: 200px;
+   margin-bottom: 5vh;
+   border: 5px solid #5AEDC5;
+}
+
+.banner {
+   font-size: 17px;
+   color: #c4cdc1;
+   text-transform: uppercase;
+   width: fit-content;
+   margin: auto;
+   border: 1px solid #55B998;
+   border-radius: 12px;
+   border-bottom: 10px solid #55B998;
+}
+
+.name {
+   letter-spacing: 3px;
+   padding: 15px 12px 10px 12px;
+   color: white;
+   
+}
+
+.social {
+   padding: 30px;
+   color: white;
+}
+
+.social i {
+   margin: 0 10px;
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+   -webkit-animation-timing-function: ease-in-out;
+   animation-timing-function: ease-in-out;
+   animation-iteration-count: infinite;
+   -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-25px);
+		-ms-transform:     translateY(-25px);
+		transform:         translateY(-25px)
+	}
+	60% {
+		-webkit-transform: translateY(-10px);
+		-ms-transform:     translateY(-10px);
+		transform:         translateY(-10px)
+	}
+}
+
+.social i:hover {
+   cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 481px){
+   .nav-main {
+      padding: 20px 40px;
+   }
+
+   .profile-box {
+      width: 400px;
+      margin: auto;
+      padding: 50px 20px 20px 20px;
+      background-color: #2A336C;
+      border-radius: 20px;
+   }
+
+   .pic {
+      width: 250px;
+      height: 250px;
+   }
+
+}
+

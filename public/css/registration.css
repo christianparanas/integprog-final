@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   font-family: 'Roboto', sans-serif;
+}
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+}
+
+.container {
+   text-align: center;
+   padding: 10px;
+   width: 90%;
+   height: 100vh;
+   position: relative;
+   display: flex;
+   align-items: center;
+}
+
+.container .header h2 {
+   position: absolute;
+   top: 18%;
+   left: 45px;
+   color: #39225D;
+   font-size: 30px;
+   font-weight: 800;
+   padding: 10px;
+}
+
+.form-control {
+   margin-bottom: 15px;
+}
+
+.form-control input {
+   outline: none;
+   border: 1px solid #e3e3e3;
+   font-size: 15px;
+   border-radius: 0;
+   padding: 15px 12px;
+   width: 100%;
+}
+
+input:focus {
+   transition: all .1s ease-in-out;
+   border: 1px solid #f96332;
+}
+
+input::placeholder {
+   color: #918989;
+}
+
+form {
+   width: 340px;
+   margin: 0 auto;
+}
+
+.submit {
+   cursor: pointer;
+   background-color: #39225D;
+   color: #e3e3e3;
+}
+
+.submit:hover {
+   background-color: rgb(76, 49, 119);
+   transition: all .3s ease-in-out;
+}
+
+.options {
+   margin-top: 15px;
+   text-align: center;
+}
+
+.create span a {
+   text-decoration: none;
+   color: #39225D;
+}
+
+#pw1, #pw2 {
+   margin-bottom: 15px;
+}
+
+/* media query */  
+@media (min-width: 481px){
+
+   .container {
+      text-align: center;
+      padding: 10px;
+      width: 450px;
+   }
+}
+
+
+
