@@ -2,7 +2,8 @@
 
    require './private/includes/autoloader.inc.php';
 
-
+   // check if the submit/login btn is click, if true, trim the passed data from the login form
+   // and after that make a Database object and pass the data to Database class login method for validation
    if(isset($_POST['submit'])) {
       $username = trim($_POST['username']);
       $password = trim($_POST['password']);
@@ -11,11 +12,12 @@
       $query->login($username, $password);
    }
 
-   if(!isset($_SESSION)) 
-   { 
+   // starting the session
+   if(!isset($_SESSION)) { 
        session_start(); 
    } 
 
+   // check if the session is valid or not, if valid redirect the user to the homepage
    if($_SESSION['status'] == "invalid" || empty($_SESSION['status'])){
       $_SESSION['status'] = 'invalid';
    } else {

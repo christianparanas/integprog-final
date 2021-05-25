@@ -1,8 +1,10 @@
 
+// getting the elements from the dom, so that it can be manipulated
 const iconTrigger = document.querySelector('#iconTrigger')
 const icon = document.querySelector('#icon')
 const menuContainer = document.querySelector('.menu-container')
 
+// opening and closing the nav menu
 iconTrigger.addEventListener('click', () => {
    if (icon.classList.contains('fa-bars')) {
 

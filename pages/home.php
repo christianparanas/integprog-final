@@ -1,16 +1,16 @@
 <?php 
 
+   // starting the session
    if(!isset($_SESSION)) 
    { 
       session_start(); 
    } 
 
+   // checking if thhe user accessing the homepage is authorized, if not, redirect them to login page
    if($_SESSION['status'] == "invalid" || empty($_SESSION['status'])){
       $_SESSION['status'] = "invalid";
       echo "<script>window.location.href='../index.php'</script>";
    }
-
-
 ?>
 
 <!DOCTYPE html>

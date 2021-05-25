@@ -1,21 +1,30 @@
 <?php 
 
+   // requiring the Database class, so that we can be able to use it here
    require '../private/classes/Database.class.php';
 
+   // checking if the session is set, if not start it
    if(!isset($_SESSION)) 
     { 
         session_start(); 
     } 
 
+    // checking if the register submit btn is click or set, if true get the passed data from registration form
    if(isset($_POST['submit'])) {
+
+      // trim the data to get rid the extra white spaces 
       $username = trim($_POST['username']);
       $email = trim($_POST['email']);
       $password = trim($_POST['password']);
 
+      // init a db obj
       $query = new Database();
+
+      // padding the trimmed data from registration page
       $query->register($username, $email, $password);
    }
 
+   // checking if the connection is valid or empty, if not, redirect ot homepage
    if($_SESSION['status'] == "invalid" || empty($_SESSION['status'])){
       $_SESSION['status'] = 'invalid';
    } else {

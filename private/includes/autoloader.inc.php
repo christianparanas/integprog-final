@@ -1,5 +1,6 @@
 <?php 
 
+   // autoload the classes
    spl_autoload_register('loader');
 
    function loader($className) {
